@@ -1,0 +1,107 @@
+body{
+    margin:0px;
+}
+
+/* BODY header */
+#body-header{
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url("URL put here");
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 1.2rem;
+
+}
+
+/* Horizonatl List css */
+.horizontal-list{
+   list-style: none;
+   padding-left: 0px;
+   margin:0px;
+    
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin:0px 10px 8px 0px;
+    font-weight: 100;
+    font-size: 1.3rem;
+ 
+    
+    
+}
+.horizontal-list li a{
+    color:white;
+    text-decoration: none;
+}
+
+.nav-items li a{
+    transition: color  0.5s ; border-bottom: 4s;
+}
+.nav-items li a:hover{       
+    color:rgb(26, 26, 204);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* if any html code wr have to center we will use .yext center class */
+.text-center{
+    text-align:center;
+}
+#name-social-container {   /*  used to center name */
+    margin-top: 20vh;
+  }
+
+#name{
+    color:white;
+    font-size:3rem;
+    line-height: 50px;
+    letter-spacing: 0.1rem;
+
+}
+ /* .social-icons li {
+    margin:0px 20px 10px 0px
+ } */
+.social-icons li a i{
+    padding: 10px;
+    font-size:1rem;
+    border-radius: 50%;  /*if this rule is not given at time we hover a outline SQUARE will appear*/
+}
+.social-icons li a i:hover{
+    color:pink;
+    /* offset-x | offset-y | blur-radius | spread-radius | color 
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+    
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+#about {
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
+
+#about p {
+    color: grey;
+    font-size: 1.2rem;
+    
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: justify;
+}
+/* #my-image {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -6rem;
+} */
+#my-image ,img{      /* -141.5px;separated by comma bwithout comma not working */
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: -10rem;
+    border: 1px solid white;
+    margin-left: 40%;
+    box-shadow: 0px 0px 6px 4px lightgrey
+  
+}
