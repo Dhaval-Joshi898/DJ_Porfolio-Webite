@@ -221,7 +221,7 @@ body{
 #Portfolio{
     width:100%;
     display:flex;
-     border: 1px solid black;   /*this  is used to check the width covered in papge*/
+    /*border: 1px solid black; */  /*this  is used to check the width covered in papge*/
     flex-direction: column;
     flex-wrap: wrap;
     align-items:center;
@@ -272,3 +272,333 @@ body{
     background-color: #80808078;
     color: white;
   }
+
+#footer{
+    width:100%;
+    /* border: 1px solid blue; */  /*for checking the the width*/
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right top, #2857a4, #403066);
+    
+}
+/* 
+#footer-heading{
+    width:100%;
+    display: flex;
+    border: 3px solid  red;
+    justify-content: center;
+    margin: 10px;
+    
+} */
+#form_andrightinfo{
+    width: 75%;;
+    /*border: 2px solid  black; */  /*this is for form and right info box is around them*/
+    display: flex;    /*here flex is given to align form and get in touch in row prev it was cloumn in FOOTER*/
+    
+}
+#contact-info{
+    margin-left: 10%; 
+}
+#contact-form{
+    /* display:flex;
+    flex-direction: column;
+    align-items: space-around; */
+    margin: 20px;
+    padding: 10px;
+    position: relative;   /* this is given for button align center absolute in button to provide*/
+    
+}
+.form-name{
+    margin:10px;
+    padding: 12px;
+    /* border:none; */
+    /* outline:none; */
+   
+}
+.form-name>input{
+
+    border:none;
+    outline:none;
+    border-bottom: 2px solid white ;
+    background: transparent;
+    width:30rem;
+}
+/* for text area */
+textarea{
+    border:none;
+    outline:none;
+    border-bottom: 2px solid white ;
+    background: transparent;
+    width:30rem;
+}
+
+#button{
+    position: absolute;  /* this is given for button align center absolute in button to provide*/
+    margin-top: 40px;
+    left: 40%;
+    background:transparent;
+    border:none;
+    border:2px solid white;
+    padding:8px;
+    color:white;
+}
+
+#contact-info{
+    color:white;
+    margin-top: 50px;
+}
+#touch{
+    font-weight: 550;
+    font-size: large;
+}
+#address{
+    font-weight: 550;
+    font-size: large;
+}
+#my-address{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+.contact-common-div{
+    margin-top:15px;
+}
+.social-icons-contact li a i{ 
+    padding: 10px;
+    font-size:1rem;
+    border-radius: 50%;  /*if this rule is not given at time we hover a outline SQUARE will appear*/
+}
+
+
+
+/* Work experience section */
+#work-experience{
+    width:100%;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid black;
+    
+}
+
+#timeline{    
+    width: 75%;
+    border: 2px solid red;
+    position:relative;
+   
+    
+}
+#timeline-box{
+    width:40%;
+    min-height:150px;
+    margin:2px;
+    border:2px solid rgb(11, 63, 63);
+    position: relative;
+    left:5%;
+    
+}
+#timeline-box:nth-child(2n){
+    left:54%;
+}
+
+#timeline-box::after{
+    /* Jo timeline box hai vo relative hai aur par jab mein timeline-box::after
+    pseudo elemetns used karunga iska matlab timeline-box ke baad kuch content daalunga
+    BUT jab content daal rha hy empty aur ek circle banaumga to vo DIKHEGA NAHI isliye position absolute daali
+    ye timeline-box jo rletaive position this uss hisb se adjust karega kyunki timeline-box::after Ye ABSOLUTE postion hai iske badd cirlce dikhega
+     */
+    content:'';
+    position: absolute;  /* i dont want to placed it after the content i want to place it according to me */
+    width:0.5rem;
+    height:0.5rem;
+    top:35%;
+    background-color:red;
+    border-radius:50%;
+    
+}
+
+#timeline-box:nth-child(2n)::after{
+    left:-11%;
+}
+
+#timeline-box:nth-child(2n+1)::after{
+    top:40%;
+    right:-13.2%;
+}
+
+#timeline-divider{
+    /* width:40%; */
+    height: 75%;
+    width: 0;
+    position:absolute;
+    top:11%;
+    left:50%;
+    border-style: dashed ;
+    border-color: #0096fa6b;
+    border-width: 3px;
+    /* border:3px dashed  #0096fa6b; */ /* you can write it as thos also*/
+}
+
+#timeline-traveller{
+    position: sticky;
+    top:25%;
+    transform: rotate(90deg);
+}
+
+/* timeline-box-content */
+.timeline-box-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.work_paragraph{
+    margin-top:5px;
+    text-align: justify;
+    
+}
+.company-name{
+    margin-top:3px;
+}
+#img-role{
+    height: 40px;
+    width:40px;
+    margin-left:-16rem;
+    display: inline;
+    
+   
+}
+
+#role{     /*designation*/
+    margin-left:106px;
+    margin-top:-10px;
+    position: absolute;  /*for designation movement mob=ve accoridng to id "timeline "is paraent*/
+    top:13px;
+    font-size: 1.4rem;
+    color:rgb(20, 20, 173)
+}
+#company-logo-img{
+    display: inline;
+}
+#company-name{
+    position: relative;
+    top:-20px;
+    color:rgb(251, 163, 0);
+    font-size: 1.2rem;;
+}
+#time-duration{
+    position: relative;
+    top:-20px;
+}
+
+@media only screen and (max-width:768px){ /*agar screen 600px aur usse kam hai to ye changes karna*/
+    #timeline-divider{
+        left:6%; 
+    }
+    #timeline-box{
+        left:54%;
+        width:80%;
+    }
+    #timeline-box:nth-child(2n){
+        left:14%;
+    }
+    #timeline-box:nth-child(2n+1){
+        left:14%; 
+
+    }
+    #timeline-box:nth-child(2n)::after{    /* for  dot  */
+        left:-11.2%;
+        z-index:1;
+        
+    }
+    #timeline-box:nth-child(2n+1)::after{   /* for  dot */ 
+        left:-11.2%;
+        z-index:1;
+    }
+    #timeline-traveller{
+        top:26%;
+    }
+     
+}
+
+
+/* #role::before{
+    content: '';
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png);
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background-size: contain; it is used to bring full image oif not written this the image was not full
+    margin-left: -20px;
+
+
+   
+} */
+#education{
+    width:100%;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid rgb(239, 17, 158);
+}
+
+@media screen and (max-width:768px){
+    #contact-info{
+        /* position: relative; */
+        /* left:-110%; */
+        color:red;
+        margin-top:120px;
+        margin-bottom: 30px;;
+        
+        /* bottom: -80% !important; */
+        
+    } 
+    #footer{
+        /* height: 100vh; */
+        /* background-image: linear-gradient(to right top, #2857a4, #403066); */
+        
+    }
+    #form_andrightinfo{
+        display: flex ;    /*here i have used flex to convert row to column because in dekstop making the direction was ROW but when pixel is decreasing screen size decreases there fore content is below the other content therefore column used*/
+        flex-direction:column;
+    }
+    .social-icons-contact li {
+        margin-bottom:50px!important;
+        margin-top:30px!important;
+        /* border: 2px solid black !important; */
+    }
+   
+}
+
+@media only screen and (max-width:572px){
+    
+    #form_andrightinfo{
+        width:80%;
+    }
+    #contact-form{
+        left:-15%;
+    }
+    #contact-info{
+        color:yellow;
+        position: relative;
+        left:-12%;
+    }
+
+    #body-header::after{
+        content: '';
+        
+    }
+}
+
+@media only screen and (max-width:572px){
+    #Skills{
+         height:auto;     /*i have written this to increase gray color height of section skills so that all skills can be arrange in the section when pixel is572px */
+    }
+}
+
